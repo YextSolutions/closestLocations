@@ -1,0 +1,39 @@
+{
+  "$id": "c_closeLocation",
+  "$schema": "https://schema.yext.com/config/km/field-type/v1",
+  "displayName": "Close Location",
+  "type": {
+    "structType": {
+      "property": [
+        {
+          "name": "location",
+          "displayName": "Location",
+          "isRequired": true,
+          "typeId": "list",
+          "type": {
+            "listType": {
+              "typeId": "entityReference",
+              "maxLength": 5000,
+              "type": {
+                "entityReferenceType": {
+                  "supportedEntityTypeIds": [
+                    "location"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "${{milesOrKilometers}}FromLocation",
+          "displayName": "${{milesOrKilometers}} From Location",
+          "isRequired": true,
+          "typeId": "decimal",
+          "type": {
+            "decimalType": {}
+          }
+        }
+      ]
+    }
+  }
+}

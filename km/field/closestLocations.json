@@ -1,0 +1,14 @@
+{
+  "$id": "c_closestLocations",
+  "$schema": "https://schema.yext.com/config/km/field/v1",
+  "displayName": "Closest Locations",
+  "group": "NONE",
+  "localization": "PRIMARY_ONLY",
+  "type": {
+    "listType": {
+      "typeId": "c_closeLocation",
+      "maxLength": 5
+    }
+  },
+  "typeId": "list"
+}
