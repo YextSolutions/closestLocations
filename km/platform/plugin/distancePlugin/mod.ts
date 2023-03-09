@@ -53,7 +53,7 @@ export async function updateDistances(){
 
         var measurement = "${{milesOrKilometers}}"
 
-        if (measurement == 'miles') {
+        if (measurement === 'Miles' || measurement === 'miles') {
             var data = {"c_closestLocations": [
                 {
                   "milesFromLocation": "TKTK",
@@ -82,7 +82,7 @@ export async function updateDistances(){
                     "location": ["TKTK"],
                     "milesFromLocation": "TKTK"
                   }
-                newObject.kmFromLocation = sortedArray[i][1].toString()
+                newObject.milesFromLocation = sortedArray[i][1].toString()
                 var mySingleLocationArray = []
                 mySingleLocationArray.push(sortedArray[i][0])
                 newObject.location = mySingleLocationArray
@@ -154,7 +154,7 @@ export function getDistanceFromLatLonInKm(lat1,lon1,lat2,lon2) {
       ; 
     var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
     var d = R * c; // Distance in km
-    if (measurement == 'miles') {
+    if (measurement === 'miles' || measurement === 'Miles') {
         var dInMiles = d / 1.60934
         return dInMiles
     }
