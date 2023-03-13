@@ -56,23 +56,23 @@ export async function updateDistances(){
         if (measurement === 'Miles' || measurement === 'miles') {
             var data = {"c_closestLocations": [
                 {
-                  "milesFromLocation": "TKTK",
+                  "MilesFromLocation": "TKTK",
                   "location": ["TKTK"]
                 },
                 {
-                    "milesFromLocation": "TKTK",
+                    "MilesFromLocation": "TKTK",
                     "location": ["TKTK"]
                 },
                 {
-                    "milesFromLocation": "TKTK",
+                    "MilesFromLocation": "TKTK",
                     "location": ["TKTK"]
                 },
                 {
-                    "milesFromLocation": "TKTK",
+                    "MilesFromLocation": "TKTK",
                     "location": ["TKTK"]
                 },
                 {
-                    "milesFromLocation": "TKTK",
+                    "MilesFromLocation": "TKTK",
                     "location": ["TKTK"]
                 },
               ]}
@@ -80,9 +80,9 @@ export async function updateDistances(){
             for (var i = 0; i< 5; i++){
                 var newObject =             {
                     "location": ["TKTK"],
-                    "milesFromLocation": "TKTK"
+                    "MilesFromLocation": "TKTK"
                   }
-                newObject.milesFromLocation = sortedArray[i][1].toString()
+                newObject.MilesFromLocation = sortedArray[i][1].toString()
                 var mySingleLocationArray = []
                 mySingleLocationArray.push(sortedArray[i][0])
                 newObject.location = mySingleLocationArray
@@ -93,23 +93,23 @@ export async function updateDistances(){
         else {
             var data = {"c_closestLocations": [
                 {
-                  "kmFromLocation": "TKTK",
+                  "KilometersFromLocation": "TKTK",
                   "location": ["TKTK"]
                 },
                 {
-                    "kmFromLocation": "TKTK",
+                    "KilometersFromLocation": "TKTK",
                     "location": ["TKTK"]
                 },
                 {
-                    "kmFromLocation": "TKTK",
+                    "KilometersFromLocation": "TKTK",
                     "location": ["TKTK"]
                 },
                 {
-                    "kmFromLocation": "TKTK",
+                    "KilometersFromLocation": "TKTK",
                     "location": ["TKTK"]
                 },
                 {
-                    "kmFromLocation": "TKTK",
+                    "KilometersFromLocation": "TKTK",
                     "location": ["TKTK"]
                 },
               ]}
@@ -117,9 +117,9 @@ export async function updateDistances(){
             for (var i = 0; i< 5; i++){
                 var newObject =             {
                     "location": ["TKTK"],
-                    "kmFromLocation": "TKTK"
+                    "KilometersFromLocation": "TKTK"
                   }
-                newObject.kmFromLocation = sortedArray[i][1].toString()
+                newObject.KilometersFromLocation = sortedArray[i][1].toString()
                 var mySingleLocationArray = []
                 mySingleLocationArray.push(sortedArray[i][0])
                 newObject.location = mySingleLocationArray
