@@ -1,5 +1,5 @@
 export async function updateDistances(){
-    const request = new Request("https://api.yext.com/v2/accounts/me/entities?v=20230206&entityTypes=location&api_key=${{apiKey}}", {
+    const request = new Request("https://api.yext.com/v2/accounts/me/entities?v=20230206&entityTypes=location&limit=100&api_key=${{apiKey}}", {
         method: 'GET',
         headers: {
         "content-type": "application/json",
@@ -15,7 +15,7 @@ export async function updateDistances(){
     var pageToken = myResponse.response.pageToken
 
     while (typeof pageToken === 'string') {
-        var requestUrl = "https://api.yext.com/v2/accounts/me/entities?v=20230206&entityTypes=location&api_key=${{apiKey}}&pageToken=" + pageToken
+        var requestUrl = "https://api.yext.com/v2/accounts/me/entities?v=20230206&entityTypes=location&limit=100&api_key=${{apiKey}}&pageToken=" + pageToken
         const request = new Request(requestUrl, {
             method: 'GET',
             headers: {
